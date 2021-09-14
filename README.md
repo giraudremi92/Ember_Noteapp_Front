@@ -1,9 +1,6 @@
-# simple-auth-app
+# Emberjs Frontend : Full stack App note : Emberjs + DJango + Token Authentification
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
-
-## Prerequisites
+#Emberjs ->
 
 You will need the following things properly installed on your computer.
 
