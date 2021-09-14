@@ -1,5 +1,15 @@
 # Emberjs Frontend : Full stack App note : Emberjs + DJango + Token Authentication
 
+Frontend Demo -> login : joe , password : joe
+
+https://rocky-waters-60136.herokuapp.com/
+
+Backend Demo : login : joe , password : joe
+
+admin : /admin
+
+https://floating-everglades-82040.herokuapp.com/
+
 #Emberjs ->
 
 You will need the following things properly installed on your computer.
