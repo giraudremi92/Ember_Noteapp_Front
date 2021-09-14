@@ -1,4 +1,4 @@
-# Emberjs Frontend : Full stack App note : Emberjs + DJango + Token Authentification
+# Emberjs Frontend : Full stack App note : Emberjs + DJango + Token Authentication
 
 #Emberjs ->
 
