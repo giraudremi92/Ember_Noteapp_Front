@@ -1,0 +1,12 @@
+{{page-title "Note App Emberjs Django"}}
+
+{{#navbar}}
+	{{#if this.session.isAuthenticated}}
+		<a {{on "click" this.invalidateSession}}>Logout</a>
+	{{else}}
+		{{#link-to "login"}}Login{{/link-to}}
+	{{/if}}
+
+{{/navbar}}
+
+{{outlet}}

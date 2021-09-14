@@ -1,0 +1,74 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
+
+.description{
+	white-space: pre-wrap;
+}
+
+.container{
+	padding-top:3rem;
+}
+
+a{
+	color:black;
+}
+
+.drag-section{
+	height:100%;
+}
+
+.not-active{
+	display:none;
+}
+
+.actived{
+	display:block;
+}
+
+.dropdown-menu{
+	position:absolute;
+}
+
+.notification{
+    padding: 20px;
+    margin: 20px;
+}
+
+.drag{
+    width: 30%;
+    min-height: 6.5em;
+    margin: 1rem 0 0 1rem;
+    color: black;
+    border-radius: 0.75em;
+    padding: 4%;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    border: solid 1px;
+    border-color: white;
+
+  }
+
+  .btn-more{
+    left: .5rem;
+    position: absolute;
+    bottom: .5rem;
+    background-color: transparent;
+    border: transparent;
+  }
+
+  .btn-more:hover{
+      background-color: white;
+      opacity: 80%;
+  }
+
+  .btn-ajouter{
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+  }
+
+  .strong{
+      color: red;
+  }

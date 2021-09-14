@@ -1,0 +1,40 @@
+{{! app/templates/login.hbs }}
+
+<div class="container">
+
+	<form {{action "authenticate" on="submit"}}>
+		<div class="field">
+			<p class="control has-icons-left has-icons-right">
+				{{input
+					class="input"
+					id="username"
+					placeholder="Enter Login"
+					value=username
+				}}
+				<span class="icon is-small is-left">
+					<i class="fas fa-envelope"></i>
+				</span>
+			</p>
+		</div>
+		<div class="field">
+			<p class="control has-icons-left">
+				{{input
+					class="input"
+					id="password"
+					placeholder="Enter Password"
+					type="password"
+					value=password
+				}}
+				<span class="icon is-small is-left">
+					<i class="fas fa-lock"></i>
+				</span>
+			</p>
+		</div>
+		<button class="button is-link" type="submit">Login</button>
+	</form>
+
+	<div class="notification is-danger {{this.show}}">
+		<button class="delete"></button>
+		Bad Credentials
+	</div>
+</div>

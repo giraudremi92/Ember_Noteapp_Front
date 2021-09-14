@@ -1,0 +1,123 @@
+<div class="container drag-section">
+
+	{{#each @t as |d|}}
+
+		<div
+			id={{d.id}}
+			class="notification drag
+				{{d.color}}
+				draggable is-inline-flex"
+			style="transform: translate({{d.coordx}}px, {{d.coordy}}px);"
+		>
+			<button
+				class="delete"
+				onclick={{action DeleteNote}}
+			></button>
+			<div>
+				<h1 class="title is-5">
+					{{d.title}}
+				</h1>
+				<p class="description">{{d.description}}</p>
+			</div>
+
+			<div id="more" class="dropdown btn-more is-hoverable">
+				<div class="dropdown-trigger">
+					<button
+						class="button"
+						aria-haspopup="true"
+						aria-controls="dropdown-menu3"
+					>
+						<span class="icon">
+							<i
+								class="fas fa-angle-down"
+								aria-hidden="true"
+							></i>
+						</span>
+					</button>
+				</div>
+				<div
+					class="dropdown-menu"
+					id="dropdown-menu3"
+					role="menu"
+				>
+					<div class="dropdown-content">
+						<a
+							class="dropdown-item"
+							onclick={{action Color}}
+						>
+							<span class="icon">
+								<i
+									class="fas fa-exclamation"
+									aria-hidden="true"
+								></i>
+							</span>
+							Urgent note
+
+						</a>
+						<hr class="dropdown-divider" />
+						<a
+							href="#"
+							class="dropdown-item"
+							onclick={{action
+								ChangeNote
+							}}
+						>
+							<span class="icon">
+								<i
+									class="fas fa-edit"
+									aria-hidden="true"
+								></i>
+							</span>
+							Edit note
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	{{/each}}
+
+</div>
+
+<div id="ModalModifs" class="modal">
+	<div class="modal-background" onclick={{action UndoModal}}></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Edit note</p>
+			<button
+				class="delete"
+				aria-label="close"
+				onclick={{action UndoModal}}
+			></button>
+		</header>
+		<section class="modal-card-body">
+			<div class="field">
+				<h1 class="title is-3">Title :</h1>
+				<input
+					id="textarea1"
+					class="input"
+					placeholder="Change note title"
+				/>
+			</div>
+			<div class="field">
+				<h1 class="title is-3">Description :</h1>
+				<textarea
+					id="textarea2"
+					class="textarea"
+				></textarea>
+			</div>
+
+		</section>
+		<footer class="modal-card-foot">
+			<button
+				class="button is-success"
+				onclick={{action ValideNote}}
+			>Update
+			</button>
+			<button
+				class="button"
+				onclick={{action UndoModal}}
+			>Cancel</button>
+		</footer>
+	</div>
+</div>

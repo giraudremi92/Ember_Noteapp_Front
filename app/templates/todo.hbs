@@ -1,0 +1,13 @@
+{{page-title "Todo"}}
+
+<Todolist @t={{todo}} />
+
+<button
+	class="button is-success is-outlined btn-ajouter"
+	onclick={{action this.add}}
+>
+	<span>Add a note</span>
+	<span class="icon">
+		<i class="fas fa-pencil-alt" aria-hidden="true"></i>
+	</span>
+</button>
